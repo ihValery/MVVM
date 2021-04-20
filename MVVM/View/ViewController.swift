@@ -5,6 +5,7 @@
 //  Created by Валерий Игнатьев on 20.04.21.
 //
 
+/*
 import UIKit
 
 class ViewController: UIViewController {
@@ -26,3 +27,4 @@ class ViewController: UIViewController {
         viewModel = ViewModel()
     }
 }
+*/
