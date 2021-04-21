@@ -15,6 +15,7 @@ class ViewModelTable: TableViewViewModelType {
                     Profile(name: "Martinov", surName: "Nikita", age: 40),
                     Profile(name: "Bryulo", surName: "Oleg", age: 36),
                     Profile(name: "Makar", surName: "Igor", age: 28),
+                    Profile(name: "Sergio", surName: "Vasya", age: 24),
                     Profile(name: "Sergio", surName: "Vasya", age: 24)]
     
     func numberOfRows() -> Int {
