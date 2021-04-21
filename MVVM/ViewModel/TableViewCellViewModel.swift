@@ -9,7 +9,8 @@ import Foundation
 
 class TableViewCellViewModel: TableViewCellViewModelType {
     
-    private var profile: Profile!
+    //Получаем profile из cellViewModel(for indexPath: IndexPath)
+    private var profile: Profile
     
     var fullName: String {
         profile.name + " " + profile.surName
