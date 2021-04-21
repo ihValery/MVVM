@@ -17,11 +17,13 @@ class DetailViewController: UIViewController {
     
     var viewModel: DetailViewModelType?
     
-    override func viewWillAppear(_ animates: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         guard let viewModel = viewModel else { return }
         self.fullLabel.text = viewModel.description
-        
+        self.nameLabel.text = viewModel.name
+        self.surNameLabel.text = viewModel.surName
+        self.ageLabel.text = viewModel.age
     }
 }

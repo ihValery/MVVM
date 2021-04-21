@@ -15,6 +15,18 @@ class DetailViewModel: DetailViewModelType {
         String(describing: "\(profile.name) \(profile.surName) is \(profile.age) old")
     }
     
+    var name: String {
+        profile.name
+    }
+    
+    var surName: String {
+        profile.surName
+    }
+    
+    var age: String {
+        String(describing: profile.age)
+    }
+    
     init(profile: Profile) {
         self.profile = profile
     }
