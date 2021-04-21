@@ -23,12 +23,10 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return viewModel?.numberOfRows() ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
         
         guard let cellTV = cell,
@@ -41,5 +39,22 @@ class TableViewController: UITableViewController {
         cellTV.viewModel = cellViewModel
         
         return cellTV
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let viewModel = viewModel else { return }
+        viewModel.selectRow(indexPath)
+    
+        performSegue(withIdentifier: "deteilSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let viewModel = viewModel else { return }
+        guard segue.identifier == "deteilSegue" else { return }
+        guard let destination = segue.destination as? DetailViewController else { return }
+        
+        destination.viewModel = viewModel.viewModelForSelectedRow()
     }
 }
