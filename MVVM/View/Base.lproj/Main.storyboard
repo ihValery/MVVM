@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Joo-uf-kq2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="22I-Ld-KGn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--MVVM-->
         <scene sceneID="T6T-dh-Bnz">
             <objects>
                 <tableViewController id="Joo-uf-kq2" customClass="TableViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,13 +61,101 @@
                             <outlet property="delegate" destination="Joo-uf-kq2" id="Fbo-PK-v5m"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="MVVM" id="cpj-Wh-G2V"/>
+                    <connections>
+                        <segue destination="KeX-au-4cz" kind="show" identifier="deteilSegue" id="Ytl-pu-NQA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FD0-ma-RD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="110"/>
+            <point key="canvasLocation" x="1028" y="110"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="f4y-xs-f2F">
+            <objects>
+                <viewController id="KeX-au-4cz" customClass="DetailViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dlv-W0-69a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="PGo-0q-L3t">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="azR-nR-VeB">
+                                <rect key="frame" x="25" y="190" width="364" height="267"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAV-WJ-LMa">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="surNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0q-Wu-cGy">
+                                        <rect key="frame" x="0.0" y="73" width="364" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-5X-Kgb">
+                                        <rect key="frame" x="0.0" y="146" width="364" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGc-0M-gJ5">
+                                        <rect key="frame" x="0.0" y="219" width="364" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iXe-jA-QlN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PGo-0q-L3t" secondAttribute="bottom" id="D8F-Cr-H4X"/>
+                            <constraint firstItem="iXe-jA-QlN" firstAttribute="trailing" secondItem="PGo-0q-L3t" secondAttribute="trailing" id="Gqm-v6-ovT"/>
+                            <constraint firstItem="PGo-0q-L3t" firstAttribute="leading" secondItem="iXe-jA-QlN" secondAttribute="leading" id="VXD-Af-NTy"/>
+                            <constraint firstItem="azR-nR-VeB" firstAttribute="leading" secondItem="iXe-jA-QlN" secondAttribute="leading" constant="25" id="WsL-ow-Nte"/>
+                            <constraint firstItem="iXe-jA-QlN" firstAttribute="trailing" secondItem="azR-nR-VeB" secondAttribute="trailing" constant="25" id="Wud-ur-ZKD"/>
+                            <constraint firstItem="PGo-0q-L3t" firstAttribute="top" secondItem="dlv-W0-69a" secondAttribute="top" id="i8l-5j-RGo"/>
+                            <constraint firstItem="azR-nR-VeB" firstAttribute="top" secondItem="iXe-jA-QlN" secondAttribute="top" constant="50" id="rSs-oS-Zan"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mzi-3B-bbs"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="jwA-5X-Kgb" id="kug-h7-cC9"/>
+                        <outlet property="fullLabel" destination="UGc-0M-gJ5" id="6aj-Mh-xlt"/>
+                        <outlet property="nameLabel" destination="ZAV-WJ-LMa" id="VZ5-Jl-l0d"/>
+                        <outlet property="surNameLabel" destination="c0q-Wu-cGy" id="YuG-6m-jKl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijO-LO-T6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oor-YL-aJC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="22I-Ld-KGn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Yqb-ic-IiP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Joo-uf-kq2" kind="relationship" relationship="rootViewController" id="2mE-o2-krm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWG-Gh-48W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250.72463768115944" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pngwing.com" width="3000" height="2000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

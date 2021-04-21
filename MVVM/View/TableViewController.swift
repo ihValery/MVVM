@@ -9,12 +9,15 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var viewModel: TableViewViewModelType?
+    //Что бы достать данные нужна ссылка на viewModel
+    //private - viewModel не собираемся никуда передовать и нигде показывать
+    private var viewModel: TableViewViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ViewModel()
+        //Создаем viewModel
+        viewModel = ViewModelTable()
     }
     
     // MARK: - Table view data source
@@ -26,17 +29,17 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
         
-        guard let viewModel = viewModel else { return UITableViewCell() }
+        guard let cellTV = cell,
+              let viewModel = viewModel else { return UITableViewCell() }
         
+        //создаем viewModel для ячейки
         let cellViewModel = viewModel.cellViewModel(for: indexPath)
         
-        cell.viewModel = cellViewModel
+        //отработал блок willSet из TableViewCell
+        cellTV.viewModel = cellViewModel
         
-//        cell.fullNameLabel.text = cellViewModel?.fullName
-//        cell.ageLabel.text = cellViewModel?.age
-        
-        return cell
+        return cellTV
     }
 }

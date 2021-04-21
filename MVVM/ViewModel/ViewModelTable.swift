@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModel: TableViewViewModelType {
+class ViewModelTable: TableViewViewModelType {
     
     var profiles = [Profile(name: "Valery", surName: "Ihnatsyeu", age: 35),
                     Profile(name: "Martinov", surName: "Nikita", age: 40),

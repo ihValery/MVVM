@@ -7,9 +7,10 @@
 
 import Foundation
 
-protocol TableViewViewModelType: class {
+protocol TableViewViewModelType {
     
     func numberOfRows () -> Int
     
+    //Генерирует viewModel для indexPath (т.е. для конкретного адресса)
     func cellViewModel(for indexPath: IndexPath) -> TableViewCellViewModelType?
 }
