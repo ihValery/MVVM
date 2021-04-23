@@ -8,24 +8,14 @@
 import Foundation
 
 class DetailViewModel: DetailViewModelType {
-    
+
     private var profile: Profile
     
     var description: String {
         String(describing: "\(profile.name) \(profile.surName) is \(profile.age) old")
     }
     
-    var name: String {
-        profile.name
-    }
-    
-    var surName: String {
-        profile.surName
-    }
-    
-    var age: String {
-        String(describing: profile.age)
-    }
+    var age: Box<String?> = Box(nil)
     
     init(profile: Profile) {
         self.profile = profile
