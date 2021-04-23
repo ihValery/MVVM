@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804824192632E9CE0023C8F4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804824182632E9CE0023C8F4 /* Box.swift */; };
 		805F2A1E262E6E2A0094BF32 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F2A1D262E6E2A0094BF32 /* TableViewController.swift */; };
 		805F2A22262E70DE0094BF32 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F2A21262E70DE0094BF32 /* TableViewCell.swift */; };
 		80AC8734262F32840065411A /* ViewModelTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC8733262F32840065411A /* ViewModelTable.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		804824182632E9CE0023C8F4 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		805F2A1D262E6E2A0094BF32 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		805F2A21262E70DE0094BF32 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		80AC8733262F32840065411A /* ViewModelTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTable.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		80AD93C8262E5B8600E90300 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				804824182632E9CE0023C8F4 /* Box.swift */,
 				80AD93E1262E60D000E90300 /* Model */,
 				8022D54F262E675100C13894 /* ViewModel */,
 				8022D54E262E674000C13894 /* View */,
@@ -210,6 +213,7 @@
 				805F2A22262E70DE0094BF32 /* TableViewCell.swift in Sources */,
 				80AD93CA262E5B8600E90300 /* AppDelegate.swift in Sources */,
 				80AC8737262F385B0065411A /* TableViewViewModelType.swift in Sources */,
+				804824192632E9CE0023C8F4 /* Box.swift in Sources */,
 				80AC8748263042C80065411A /* DetailViewModelType.swift in Sources */,
 				80AC874B2630430E0065411A /* DetailViewModel.swift in Sources */,
 				80AC873F262F3DAB0065411A /* TableViewCellViewModel.swift in Sources */,

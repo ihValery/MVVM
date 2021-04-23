@@ -10,7 +10,6 @@ import Foundation
 protocol DetailViewModelType {
     
     var description: String { get }
-    var name: String { get }
-    var surName: String { get }
-    var age: String { get }
+    //get'бл свойство - которое можем получить, но не можем установить
+    var age: Box<String?> { get }
 }
